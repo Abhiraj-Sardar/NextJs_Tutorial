@@ -30,6 +30,8 @@ Then the content inside page.js will be displayed on the /about route
 
 # Creating Nested Routes
 
+for example you have nested routes, like localhost:3000/**about/users** then you should follow the following folder structure
+
 ```
  /app
   |
@@ -39,3 +41,35 @@ Then the content inside page.js will be displayed on the /about route
            |-page.js
 
 ```
+
+# Working with Links
+
+Now, links are used in client-side Navigations.
+
+- Point: It is a good approach to have a **/component** folder which will contain all the client-side components.
+
+Now if you want to see your frontend component in webpage then import it at **/app/layout.js**
+
+# useRouter() Hook
+
+this hook more or less works same like **Links**. To use this you may need to import ***import { useRouter } from "next/router";***.
+
+To understand how it works refer the code shared in the userouter directory.
+
+# Ignoring Routes
+
+In nextJs we can ignore a route and also get the content of its sub routes.
+
+to ignore a particular route, one enclose that route with () parentesis.
+
+for this the folder structure migh look like this--
+
+```
+/app
+ |-/(Ignore)
+      |-/Hello
+           |-page.js
+```
+Now if we go to **localhost:3000/Hello/** we will get the content of /Hello/page.js without mentioning **localhost:3000/Ignore/Hello/** 
+
+for the code, please consider the code of ***(Ignore)*** directory
