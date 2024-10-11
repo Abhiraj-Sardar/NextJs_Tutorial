@@ -20,6 +20,22 @@ npm run dev
 
 for each and every route in nextjs we should create a separate folder and that folder should have a file named page.js
 
-ex:- If we want to create a Route called ***/About*** then we should have this folder structure --
+ex:- If we want to create a Route called ***/about*** then we should have this folder structure --
 
-***/app/About/page.js***
+***/app/about/page.js***
+
+Then the content inside page.js will be displayed on the /about route
+
+- Note: you should have the name of the file as page.js inside the /about(always in small letters).
+
+# Creating Nested Routes
+
+```
+ /app
+  |
+  |-/about
+       |-page.js
+       |-/users
+           |-page.js
+
+```
